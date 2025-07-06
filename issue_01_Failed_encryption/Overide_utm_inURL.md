@@ -1,12 +1,13 @@
-
+## name: 🐞 Bug | issue_02_overide_params_in_URL
 ### Concept:
-An URL with format: /v1/[encrypt:JSON-data]?utm_source=ABC&utm_medium=medium_name&utm_campaign=campaign_name </br>
+An URL with format: `/pos/BqaCjo8ShMHkiYqNltuQ%3D%3D?utm_source=ABC&user_id=ONSWkY%2Bz8xzLP9ykH4fA%3D%3D&url_success=abcapp%3A%2F%2%2embedded%3Fresult%3Dsuccess&url_fail=homezuiapp%3A%2F%2Fapp%2Fembedded%3Fresult%3Dfail` </br>
 
-BE: decypted:JSON-data to get all information, check rules, check timestamp valid, generate uuid... </br>
+
+BE: decoding string after pos/ to get all information </br>
 FE: access URL successfully </br>
 ### Issue: 
-Actual: ?utm_source=zzz
-Expect: ?utm_source=ABC
+**Actual**: ?utm_source=zzz </br>
+**Expect**: ?utm_source=ABC
 
 
 ### Root cause:
